@@ -48,7 +48,7 @@ function Myself() {
         {/* Text section */}
         <div className="md:w-1/2 p-4bg-opacity-10 backdrop-blur-md rounded-lg">
           <p className="text-[4vw] md:text-[1.5vw] text-white text-left">
-            I am G.A.P. Pathum.<br />
+            I am Kanishka Chethana<br />
             I'm a web designer and developer based in MERN stack.
           </p>
           <p className="text-[4vw] md:text-[1.2vw] text-white text-left mt-6">

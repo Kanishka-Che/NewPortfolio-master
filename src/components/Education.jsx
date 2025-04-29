@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import badge1 from '../assets/badge1.png';
-import badge2 from '../assets/badge2.png';
+
 
 const Education = () => {
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -69,13 +69,7 @@ const Education = () => {
           </motion.div>
 
           {/* Line 2 */}
-          <motion.div
-            className="w-1 h-12 bg-gradient-to-b from-pink-500 via-purple-600 to-indigo-700 ml-8"
-            initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
-            variants={timelineLineVariants}
-            transition={{ duration: 0.2, ease: "easeInOut", delay: 0.1 }}
-          ></motion.div>
+          
 
           {/* Badge 2 and Tab */}
           <motion.div
@@ -85,46 +79,11 @@ const Education = () => {
             variants={fadeInVariants}
             transition={{ duration: 0.2, ease: "easeInOut", delay: 0.2 }}
           >
-            <motion.img
-              src={badge2}
-              alt="Badge 2"
-              className="w-16 h-16 z-10 rounded-full bg-opacity-10 backdrop-blur-md"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
-            />
-            <div className="flex flex-col ml-4 p-4 bg-opacity-10 backdrop-blur-md rounded-lg">
-              <span className="text-white font-bold">2020</span>
-              <span className="text-white">
-                G.C.E. Advanced Levels (Physics Stream)<br />
-                T.B.M. Herath National School - Ragala
-              </span>
-            </div>
-          </motion.div>
+            
 
           {/* Line 3 */}
-          <motion.div
-            className="w-1 h-12 bg-gradient-to-b from-pink-500 via-purple-600 to-indigo-700 ml-8"
-            initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
-            variants={timelineLineVariants}
-            transition={{ duration: 0.2, ease: "easeInOut", delay: 0.2 }}
-          ></motion.div>
-
-          {/* Badge 3 and Tab */}
-          <motion.div
-            className="flex items-center justify-start w-full relative"
-            initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
-            variants={fadeInVariants}
-            transition={{ duration: 0.2, ease: "easeInOut", delay: 0.3 }}
-          >
-            <motion.img
-              src={badge2}
-              alt="Badge 2"
-              className="w-16 h-16 z-10 rounded-full bg-opacity-10 backdrop-blur-md"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
-            />
+          
+            
             <div className="flex flex-col ml-4 p-4 bg-opacity-10 backdrop-blur-md rounded-lg">
               <span className="text-white font-bold">2016</span>
               <span className="text-white">
@@ -135,13 +94,7 @@ const Education = () => {
           </motion.div>
 
           {/* Final Line */}
-          <motion.div
-            className="w-1 h-12 bg-gradient-to-b from-pink-500 via-purple-600 to-indigo-700 ml-8"
-            initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
-            variants={timelineLineVariants}
-            transition={{ duration: 0.2, ease: "easeInOut", delay: 0.3 }}
-          ></motion.div>
+          
         </div>
       </div>
     </div>

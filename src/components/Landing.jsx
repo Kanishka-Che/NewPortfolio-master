@@ -23,7 +23,7 @@ function Landing({ scrollToMyself }) {
     return (
         <>
             <Helmet>
-                <title>G.A.P. Pathum - Full Stack Developer</title>
+                <title>Kanishka Chethana - Full Stack Developer</title>
                 <meta name="description" content="G.A.P. Pathum's portfolio. Full stack developer, designer, and software engineer." />
                 <meta name="keywords" content="Full Stack Developer, Designer, Software Engineer, Portfolio" />
             </Helmet>
@@ -55,7 +55,7 @@ function Landing({ scrollToMyself }) {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                    Hello World!
+                    HI There!
                 </motion.h1>
 
                 <motion.h2
@@ -64,7 +64,7 @@ function Landing({ scrollToMyself }) {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                    I'm G.A.P. Pathum
+                    I'm Kanishka Chethana
                 </motion.h2>
 
                 <motion.div

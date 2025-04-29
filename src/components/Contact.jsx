@@ -131,37 +131,28 @@ const Contact = () => {
                     variants={fadeInVariants}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <a href="mailto:pathumpasindu41@gmail.com" className="text-white text-lg font-medium flex items-center gap-2">
-                        <FaEnvelope className="w-6 h-6" /> pathumpasindu41@gmail.com
+                    <a href="mailto:kanishkachethana@gailm.com" className="text-white text-lg font-medium flex items-center gap-2">
+                        <FaEnvelope className="w-6 h-6" /> kanishkachethana@gailm.com
                     </a>
-                    <a href="tel:+94752955301" className="text-white text-lg font-medium flex items-center gap-2">
-                        <FaPhone className="w-6 h-6" /> +94 752 955 301
+                    <a href="tel:+94789107363" className="text-white text-lg font-medium flex items-center gap-2">
+                        <FaPhone className="w-6 h-6" /> +94 789 107 363
                     </a>
                     <p className="text-white text-lg font-medium flex items-center gap-2">
-                        <FaMapMarkerAlt className="w-6 h-6" /> Ragala, Sri Lanka
+                        <FaMapMarkerAlt className="w-6 h-6" /> Anuradhapura, Sri Lanka
                     </p>
 
                     <div className="flex gap-6 justify-start mt-4 flex-wrap">
-                        <a href="https://github.com/GAP-Pathum" className="text-white hover:text-blue-400" aria-label="GitHub">
+                        <a href="https://github.com/Kanishka-Che" className="text-white hover:text-blue-400" aria-label="GitHub">
                             <FaGithub className="w-8 h-8" />
                         </a>
-                        <a href="https://www.linkedin.com/in/pasindu-pathum-98a299249/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-white hover:text-blue-400" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/kanishka-chethana-55b618295/" className="text-white hover:text-blue-400" aria-label="LinkedIn">
                             <FaLinkedin className="w-8 h-8" />
                         </a>
-                        <a href="https://www.facebook.com/share/1XaLVXKiqm/" className="text-white hover:text-blue-400" aria-label="Facebook">
+                        <a href="https://www.facebook.com/kanishka.chethana?mibextid=ZbWKwL" className="text-white hover:text-blue-400" aria-label="Facebook">
                             <FaFacebook className="w-8 h-8" />
                         </a>
-                        <a href="https://www.instagram.com/g_a_p_pathum/profilecard/?igsh=MXVuNXQ1eXY0NjBkMA==" className="text-white hover:text-blue-400" aria-label="Instagram">
+                        <a href="https://www.instagram.com/kanishkachethana?igsh=N2Z5N2x4bDN4YzU5" className="text-white hover:text-blue-400" aria-label="Instagram">
                             <FaInstagram className="w-8 h-8" />
-                        </a>
-                        <a href="https://youtube.com/@pathumpasindu41?si=RnrUX0NvtOWvNs4O" className="text-white hover:text-blue-400" aria-label="YouTube">
-                            <FaYoutube className="w-8 h-8" />
-                        </a>
-                        <a href="https://www.blogger.com/blog/posts/6357854027725991588?pli=1" className="text-white hover:text-blue-400" aria-label="Blogger">
-                            <FaBlogger className="w-8 h-8" />
-                        </a>
-                        <a href="https://stackoverflow.com/users/27074307/pasindu-pathum" className="text-white hover:text-blue-400" aria-label="Stack Overflow">
-                            <FaStackOverflow className="w-8 h-8" />
                         </a>
                         <a href="https://wa.me/94752955301" className="text-white hover:text-blue-400" aria-label="WhatsApp">
                             <FaWhatsapp className="w-8 h-8" />
