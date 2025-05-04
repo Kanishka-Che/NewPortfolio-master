@@ -35,7 +35,7 @@ function Landing({ scrollToMyself }) {
                 style={{ height: '100vh' }}
             >
                 <motion.div
-                    className="p-1 mb-6 bg-gradient-to-tr from-pink-500 via-purple-600 to-indigo-700 rounded-full w-48 h-48 overflow-hidden hover:shadow-[0_0_15px_6px_rgba(128,90,213,0.7),0_0_25px_10px_rgba(59,130,246,0.7)] transition-shadow duration-300"
+                    className="p-1 mb-6 bg-gradient-to-tr from-gray-800 via-purple-900 to-black rounded-full w-48 h-48 overflow-hidden hover:shadow-[0_0_20px_8px_rgba(139,92,246,0.5),0_0_30px_12px_rgba(30,64,175,0.4)] transition-shadow duration-500 ease-in-out"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.5 }}
@@ -83,7 +83,7 @@ function Landing({ scrollToMyself }) {
                     />
                 </motion.div>
 
-                {/* Social Icons */}
+                
                 <motion.div
                     className="flex justify-center mt-6 gap-7"
                     initial={{ y: 50, opacity: 0 }}
@@ -91,7 +91,7 @@ function Landing({ scrollToMyself }) {
                     transition={{ duration: 0.5, delay: 1 }}
                 >
                     <a
-                        href="https://github.com/GAP-Pathum"
+                        href="https://github.com/Kanishka-Che"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:scale-110 transition-transform duration-300 text-white"
@@ -100,7 +100,7 @@ function Landing({ scrollToMyself }) {
                         <FaGithub className="w-8 h-8" />
                     </a>
                     <a
-                        href="https://www.linkedin.com/in/pasindu-pathum-98a299249/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        href="https://www.linkedin.com/in/kanishka-chethana-55b618295/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:scale-110 transition-transform duration-300 text-white"
@@ -109,7 +109,7 @@ function Landing({ scrollToMyself }) {
                         <FaLinkedin className="w-8 h-8" />
                     </a>
                     <a
-                        href="https://www.instagram.com/g_a_p_pathum/profilecard/?igsh=MXVuNXQ1eXY0NjBkMA=="
+                        href="https://www.instagram.com/kanishkachethana?igsh=N2Z5N2x4bDN4YzU5"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:scale-110 transition-transform duration-300 text-white"
@@ -117,15 +117,7 @@ function Landing({ scrollToMyself }) {
                     >
                         <FaInstagram className="w-8 h-8" />
                     </a>
-                    <a
-                        href="https://www.behance.net/pasindupathum"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:scale-110 transition-transform duration-300 text-white"
-                        aria-label="Behance"
-                    >
-                        <FaBehance className="w-8 h-8" />
-                    </a>
+                   
                 </motion.div>
 
                 <motion.div
@@ -136,9 +128,6 @@ function Landing({ scrollToMyself }) {
                 >
                     <button className="button-primary group" onClick={navigateToContact}>
                         <span className="group-hover:bg-opacity-0">Contact Me</span>
-                    </button>
-                    <button className="button-primary group" onClick={handleDownloadCV}>
-                        <span className="group-hover:bg-opacity-0">My Resume</span>
                     </button>
                 </motion.div>
 

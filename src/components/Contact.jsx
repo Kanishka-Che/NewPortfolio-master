@@ -2,166 +2,144 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import emailjs from 'emailjs-com';
-import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaYoutube, FaBlogger, FaStackOverflow, FaWhatsapp, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import {
+  FaGithub, FaLinkedin, FaFacebook, FaInstagram,
+  FaWhatsapp, FaEnvelope, FaPhone, FaMapMarkerAlt
+} from 'react-icons/fa';
 
 const fadeInVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
+  hidden: { y: 50, opacity: 0 },
+  visible: { y: 0, opacity: 1 },
 };
 
 const Contact = () => {
-    const [ref1, inView1] = useInView();
-    const [ref2, inView2] = useInView();
-    const [ref3, inView3] = useInView();
-    const [formStatus, setFormStatus] = useState("");
+  const [ref1, inView1] = useInView();
+  const [ref2, inView2] = useInView();
+  const [ref3, inView3] = useInView();
+  const [formStatus, setFormStatus] = useState("");
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
 
-        emailjs
-            .sendForm(
-            'service_bmz6kns', 
-            'template_irsfppu',
-            e.target,
-            'IPYLmr56gm3jq8OZq' // Add your user token here
-            )
-            .then(
-            (result) => {
-                console.log('Email sent successfully:', result.text);
-                setFormStatus("🎉 Your message has been sent successfully! Thank you for reaching out. I'll get back to you soon.");
-                showPopup("🎉 Your message has been sent successfully! Thank you for reaching out. I'll get back to you soon.", "success");
-            },
-            (error) => {
-                console.error('Error sending email:', error.text);
-                setFormStatus("🚫 Oops! Something went wrong. Please try again later.");
-                showPopup("🚫 Oops! Something went wrong. Please try again later.", "error");
-            }
-            );
-
-        const showPopup = (message, type) => {
-            const popup = document.createElement('div');
-            popup.className = `popup-message ${type}`;
-            popup.textContent = message;
-            document.body.appendChild(popup);
-
-            setTimeout(() => {
-            popup.classList.add('show');
-            }, 100);
-
-            setTimeout(() => {
-            popup.classList.remove('show');
-            setTimeout(() => {
-                document.body.removeChild(popup);
-            }, 300);
-            }, 3000);
-        };
-
-        e.target.reset();
-    };
-
-    return (
-        <section id="contact" className="min-h-screen w-full flex flex-col justify-center items-center p-6 mt-20">
-            <motion.h1
-                ref={ref1}
-                className="text-4xl font-bold text-white mb-10"
-                initial="hidden"
-                animate={inView1 ? 'visible' : 'hidden'}
-                variants={fadeInVariants}
-                transition={{ duration: 0.5, delay: 0.1 }}
-            >
-                Contact Me
-            </motion.h1>
-
-            <div className="flex flex-col md:flex-row w-full max-w-6xl gap-10 justify-between items-center">
-                {/* Contact Form */}
-                <motion.form
-                    ref={ref2}
-                    onSubmit={handleFormSubmit}
-                    className="flex flex-col gap-6 shadow-lg w-full md:w-1/2 p-6 rounded-lg"
-                    initial="hidden"
-                    animate={inView2 ? 'visible' : 'hidden'}
-                    variants={fadeInVariants}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                >
-                    <label className="text-white text-lg font-medium">Name</label>
-                    <input
-                        type="text"
-                        name="name"
-                        required
-                        className="w-full p-3 rounded-lg bg-transparent border border-purple-500 text-white placeholder-gray-400 focus:outline-none backdrop-blur-sm"
-                        placeholder="Enter your name"
-                    />
-
-                    <label className="text-white text-lg font-medium">Email</label>
-                    <input
-                        type="email"
-                        name="email"
-                        required
-                        className="w-full p-3 rounded-lg bg-transparent border border-purple-500 text-white placeholder-gray-400 focus:outline-none backdrop-blur-sm"
-                        placeholder="Enter your email"
-                    />
-
-                    <label className="text-white text-lg font-medium">Message</label>
-                    <textarea
-                        name="message"
-                        required
-                        className="w-full p-3 h-28 rounded-lg bg-transparent border border-purple-500 text-white placeholder-gray-400 focus:outline-none backdrop-blur-sm"
-                        placeholder="Write your message"
-                    ></textarea>
-
-                    <button
-                        type="submit"
-                        className="button-primary"
-                    >
-                        <span>Send</span>
-                    </button>
-
-                    {/* Form Status Message */}
-                    {formStatus && (
-                        <p className="text-center text-white mt-4">{formStatus}</p>
-                    )}
-                </motion.form>
-
-                {/* Contact Details */}
-                <motion.div
-                    ref={ref3}
-                    className="flex flex-col gap-6 shadow-lg w-full md:w-1/2 p-6 rounded-lg"
-                    initial="hidden"
-                    animate={inView3 ? 'visible' : 'hidden'}
-                    variants={fadeInVariants}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                >
-                    <a href="mailto:kanishkachethana@gailm.com" className="text-white text-lg font-medium flex items-center gap-2">
-                        <FaEnvelope className="w-6 h-6" /> kanishkachethana@gailm.com
-                    </a>
-                    <a href="tel:+94789107363" className="text-white text-lg font-medium flex items-center gap-2">
-                        <FaPhone className="w-6 h-6" /> +94 789 107 363
-                    </a>
-                    <p className="text-white text-lg font-medium flex items-center gap-2">
-                        <FaMapMarkerAlt className="w-6 h-6" /> Anuradhapura, Sri Lanka
-                    </p>
-
-                    <div className="flex gap-6 justify-start mt-4 flex-wrap">
-                        <a href="https://github.com/Kanishka-Che" className="text-white hover:text-blue-400" aria-label="GitHub">
-                            <FaGithub className="w-8 h-8" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/kanishka-chethana-55b618295/" className="text-white hover:text-blue-400" aria-label="LinkedIn">
-                            <FaLinkedin className="w-8 h-8" />
-                        </a>
-                        <a href="https://www.facebook.com/kanishka.chethana?mibextid=ZbWKwL" className="text-white hover:text-blue-400" aria-label="Facebook">
-                            <FaFacebook className="w-8 h-8" />
-                        </a>
-                        <a href="https://www.instagram.com/kanishkachethana?igsh=N2Z5N2x4bDN4YzU5" className="text-white hover:text-blue-400" aria-label="Instagram">
-                            <FaInstagram className="w-8 h-8" />
-                        </a>
-                        <a href="https://wa.me/94752955301" className="text-white hover:text-blue-400" aria-label="WhatsApp">
-                            <FaWhatsapp className="w-8 h-8" />
-                        </a>
-                    </div>
-                </motion.div>
-            </div>
-        </section>
+    emailjs.sendForm(
+      'service_v0e93er',    
+      'template_h91mgan',    
+      e.target,
+      'btotwDHrylpZeD4x2'      
+    ).then(
+      (result) => {
+        setFormStatus("✅ Message sent successfully!");
+      },
+      (error) => {
+        setFormStatus("❌ Failed to send message. Please try again.");
+      }
     );
+
+    e.target.reset();
+  };
+
+  return (
+    <section id="contact" className="min-h-screen w-full flex flex-col justify-center items-center p-6 mt-20">
+      <motion.h1
+        ref={ref1}
+        className="text-4xl font-bold text-white mb-10"
+        initial="hidden"
+        animate={inView1 ? 'visible' : 'hidden'}
+        variants={fadeInVariants}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        Contact Me
+      </motion.h1>
+
+      <div className="flex flex-col md:flex-row w-full max-w-6xl gap-10 justify-between items-center">
+        {/* Contact Form */}
+        <motion.form
+          ref={ref2}
+          onSubmit={handleFormSubmit}
+          className="flex flex-col gap-6 shadow-lg w-full md:w-1/2 p-6 rounded-lg"
+          initial="hidden"
+          animate={inView2 ? 'visible' : 'hidden'}
+          variants={fadeInVariants}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <label className="text-white text-lg font-medium">Name</label>
+          <input
+            type="text"
+            name="name"
+            required
+            className="w-full p-3 rounded-lg bg-transparent border border-purple-500 text-white placeholder-gray-400 focus:outline-none backdrop-blur-sm"
+            placeholder="Enter your name"
+          />
+
+          <label className="text-white text-lg font-medium">Email</label>
+          <input
+            type="email"
+            name="email"
+            required
+            className="w-full p-3 rounded-lg bg-transparent border border-purple-500 text-white placeholder-gray-400 focus:outline-none backdrop-blur-sm"
+            placeholder="Enter your email"
+          />
+
+          <label className="text-white text-lg font-medium">Message</label>
+          <textarea
+            name="message"
+            required
+            className="w-full p-3 h-28 rounded-lg bg-transparent border border-purple-500 text-white placeholder-gray-400 focus:outline-none backdrop-blur-sm"
+            placeholder="Write your message"
+          ></textarea>
+
+          <button
+            type="submit"
+            className="bg-purple-600 hover:bg-purple-700 transition text-white px-6 py-2 rounded-lg font-medium"
+          >
+            Send
+          </button>
+
+          {formStatus && (
+            <p className="text-center text-white mt-4">{formStatus}</p>
+          )}
+        </motion.form>
+
+        {/* Contact Info */}
+        <motion.div
+          ref={ref3}
+          className="flex flex-col gap-6 shadow-lg w-full md:w-1/2 p-6 rounded-lg"
+          initial="hidden"
+          animate={inView3 ? 'visible' : 'hidden'}
+          variants={fadeInVariants}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <a href="mailto:kanishkachethana@gmail.com" className="text-white text-lg font-medium flex items-center gap-2">
+            <FaEnvelope className="w-6 h-6" /> kanishkachethana@gmail.com
+          </a>
+          <a href="tel:+94789107363" className="text-white text-lg font-medium flex items-center gap-2">
+            <FaPhone className="w-6 h-6" /> +94 789 107 363
+          </a>
+          <p className="text-white text-lg font-medium flex items-center gap-2">
+            <FaMapMarkerAlt className="w-6 h-6" /> Anuradhapura, Sri Lanka
+          </p>
+
+          <div className="flex gap-6 justify-start mt-4 flex-wrap">
+            <a href="https://github.com/Kanishka-Che" className="text-white hover:text-blue-400" aria-label="GitHub">
+              <FaGithub className="w-8 h-8" />
+            </a>
+            <a href="https://www.linkedin.com/in/kanishka-chethana-55b618295/" className="text-white hover:text-blue-400" aria-label="LinkedIn">
+              <FaLinkedin className="w-8 h-8" />
+            </a>
+            <a href="https://www.facebook.com/kanishka.chethana?mibextid=ZbWKwL" className="text-white hover:text-blue-400" aria-label="Facebook">
+              <FaFacebook className="w-8 h-8" />
+            </a>
+            <a href="https://www.instagram.com/kanishkachethana?igsh=N2Z5N2x4bDN4YzU5" className="text-white hover:text-blue-400" aria-label="Instagram">
+              <FaInstagram className="w-8 h-8" />
+            </a>
+            <a href="https://wa.me/94752955301" className="text-white hover:text-blue-400" aria-label="WhatsApp">
+              <FaWhatsapp className="w-8 h-8" />
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
 };
 
 export default Contact;

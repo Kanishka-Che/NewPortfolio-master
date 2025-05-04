@@ -62,38 +62,11 @@ const Education = () => {
             <div className="flex flex-col ml-4 p-4 bg-opacity-10 backdrop-blur-md rounded-lg">
               <span className="text-white font-bold">2022 to Present</span>
               <span className="text-white">
-                BSc.(Hons) Computing and Information Systems<br />
+                BSc.(Hons) Software Engineer<br />
                 Sabaragamuwa University of Sri Lanka
               </span>
             </div>
           </motion.div>
-
-          {/* Line 2 */}
-          
-
-          {/* Badge 2 and Tab */}
-          <motion.div
-            className="flex items-center justify-start w-full relative"
-            initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
-            variants={fadeInVariants}
-            transition={{ duration: 0.2, ease: "easeInOut", delay: 0.2 }}
-          >
-            
-
-          {/* Line 3 */}
-          
-            
-            <div className="flex flex-col ml-4 p-4 bg-opacity-10 backdrop-blur-md rounded-lg">
-              <span className="text-white font-bold">2016</span>
-              <span className="text-white">
-                G.C.E. Ordinary Levels<br />
-                T.B.M. Herath National School - Ragala
-              </span>
-            </div>
-          </motion.div>
-
-          {/* Final Line */}
           
         </div>
       </div>
