@@ -12,19 +12,13 @@ function Myself() {
     <section id="myself" className="w-full h-screen flex flex-col justify-center items-center mx-auto p-4">
     <div className="w-full h-screen flex flex-col justify-center items-center mx-auto p-4">
       {/* Horizontal line with circles */}
-      <motion.div
-        ref={ref1}
-        className="flex items-center w-full flex-wrap mt-0"
-        initial={{ y: 50, opacity: 0 }}
-        animate={inView1 ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-        transition={{ duration: 0.3, delay: 0.05 }}
-      >
+      
         <hr className="bg-gradient-to-tr from-pink-500 via-purple-600 to-indigo-700 h-2 border-0 font-bold flex-1 min-w-[100px]" />
         <motion.div className="flex justify-end items-center ml-2.5 flex-wrap">
           <motion.div className="w-5 h-5 rounded-full bg-pink-500 mr-2.5" />
           <motion.div className="w-5 h-5 rounded-full bg-purple-600" />
         </motion.div>
-      </motion.div>
+     
 
       {/* Heading */}
       <motion.h1
@@ -52,7 +46,7 @@ function Myself() {
             I'm a web designer and developer based in MERN stack.
           </p>
           <p className="text-[4vw] md:text-[1.2vw] text-white text-left mt-6">
-            Enthusiastic Computing and Information Systems undergraduate with a passion for software development and innovation. Quick learner and adaptable team player, committed to solving complex problems and contributing to impactful projects. Focused on leveraging skills to advance in the tech industry and make a meaningful difference through technology.
+            Enthusiastic Software Engineer undergraduate with a passion for software development and innovation. Quick learner and adaptable team player, committed to solving complex problems and contributing to impactful projects. Focused on leveraging skills to advance in the tech industry and make a meaningful difference through technology.
           </p>
         </div>
 
