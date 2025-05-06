@@ -39,16 +39,9 @@ const Projects = () => {
 
     return (
         <section id="projects" className="h-screen w-full flex flex-col items-center p-4 my-8 relative">
-            <motion.h1
-                ref={ref1}
-                className="text-[8vw] md:text-[4vw] font-bold text-white"
-                initial="hidden"
-                animate={inView1 ? 'visible' : 'hidden'}
-                variants={fadeInVariants}
-                transition={{ duration: 0.3, delay: 0.1 }}
-            >
+            
                 Projects
-            </motion.h1>
+            
             <div className="relative w-full max-w-6xl">
                 {canScrollLeft && (
                     <button 
@@ -93,7 +86,7 @@ const Projects = () => {
             </div>
             <div className="mt-8 text-center max-w-4xl mx-auto text-white">
                 <p className="text-lg">
-                    Here are some of the projects I have worked on. My stack includes technologies like React, Node.js, Express, MongoDB, and more. I enjoy building full-stack applications and continuously learning new tools and frameworks to enhance my skills.
+                Here are some of the projects I have worked on. My stack includes technologies like React, Node.js, Express, MongoDB,React Native and more. I enjoy building full-stack applications and continuously learning new tools and frameworks to enhance my skills.
                 </p>
             </div>
         </section>
