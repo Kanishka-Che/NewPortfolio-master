@@ -67,7 +67,7 @@ const Contact = () => {
             type="text"
             name="name"
             required
-            className="w-full p-3 rounded-lg bg-transparent border border-purple-500 text-white placeholder-gray-400 focus:outline-none backdrop-blur-sm"
+            className="w-full p-3 rounded-lg bg-transparent border border-black-800 text-white placeholder-black-400 focus:outline-none backdrop-blur-sm"
             placeholder="Enter your name"
           />
 
@@ -76,7 +76,7 @@ const Contact = () => {
             type="email"
             name="email"
             required
-            className="w-full p-3 rounded-lg bg-transparent border border-purple-500 text-white placeholder-gray-400 focus:outline-none backdrop-blur-sm"
+            className="w-full p-3 rounded-lg bg-transparent border border-black-800 text-white placeholder-black-400 focus:outline-none backdrop-blur-sm"
             placeholder="Enter your email"
           />
 
@@ -84,13 +84,13 @@ const Contact = () => {
           <textarea
             name="message"
             required
-            className="w-full p-3 h-28 rounded-lg bg-transparent border border-purple-500 text-white placeholder-gray-400 focus:outline-none backdrop-blur-sm"
+            className="w-full p-3 h-28 rounded-lg bg-transparent border border-black-800 text-white placeholder-black-400 focus:outline-none backdrop-blur-sm"
             placeholder="Write your message"
           ></textarea>
 
           <button
             type="submit"
-            className="bg-purple-600 hover:bg-purple-700 transition text-white px-6 py-2 rounded-lg font-medium"
+            className="bg-purple-500 hover:bg-purple-700 transition text-black px-6 py-2 rounded-lg font-medium"
           >
             Send
           </button>

@@ -12,8 +12,8 @@ const projectsData = [
     {
         id: 2,
         image: p2,
-        title: 'Foody',
-        description: 'Online Food Ordering App',
+        title: 'Money Rate',
+        description: 'Online Currency conversion system',
     },
 ];
 
