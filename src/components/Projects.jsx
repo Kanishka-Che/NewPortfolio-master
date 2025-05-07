@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import projectsData from '../assets/Projects/projectDetails';
 
 const fadeInVariants = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: { y: 10, opacity: 0 },
     visible: { y: 0, opacity: 1 },
 };
 
@@ -40,7 +40,17 @@ const Projects = () => {
     return (
         <section id="projects" className="h-screen w-full flex flex-col items-center p-4 my-8 relative">
             
+            <motion.h1
+                ref={ref1}
+                className="text-[8vw] md:text-6xl font-bold mb-12 text-white text-center"
+                initial="hidden"
+                animate={inView1 ? 'visible' : 'hidden'}
+                variants={fadeInVariants}
+                transition={{ duration: 0.6 }}
+                >
                 Projects
+                </motion.h1>
+
             
             <div className="relative w-full max-w-6xl">
                 {canScrollLeft && (
