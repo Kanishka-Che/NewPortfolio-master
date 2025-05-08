@@ -3,7 +3,6 @@ import "tailwindcss/tailwind.css";
 import Loading from "./components/Loading";
 import ParticlesBackground from "./components/ParticlesBackground";
 
-// Lazy load components to reduce the initial bundle size
 const Header = lazy(() => import("./components/Header/Header"));
 const Landing = lazy(() => import("./components/Landing"));
 const Myself = lazy(() => import("./components/Myself"));
@@ -16,11 +15,11 @@ const App = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Simulate loading process
+      
         const timer = setTimeout(() => {
             setIsLoading(false);
         }, 100); // Reduced timeout for quicker feedback
-        return () => clearTimeout(timer); // Cleanup timeout
+        return () => clearTimeout(timer); 
     }, []);
 
     if (isLoading) {

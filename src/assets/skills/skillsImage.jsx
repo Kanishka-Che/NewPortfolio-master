@@ -2,7 +2,6 @@ import html from './html.svg'
 import photoshop from './photoshop.svg'
 import illustrator from './illustrator.svg'
 import docker from './docker.svg'
-
 import afterEffects from './after-effects.svg'
 import css from './css.svg'
 import javascript from './javascript.svg'
@@ -12,43 +11,20 @@ import react from './react.svg'
 import typescript from './typescript.svg'
 import mongoDB from './mongoDB.svg'
 import mysql from './mysql.svg'
-
 import tailwind from './tailwind.svg'
 import vitejs from './vitejs.svg'
-
 import c from './c.svg'
-
 import java from './java.svg'
 import php from './php.svg'
-import python from './python.svg'
-
 import adobeaudition from './adobeaudition.svg'
 import aws from './aws.svg'
-
-import django from './django.svg'
 import firebase from './firebase.svg'
-import gimp from './gimp.svg'
 import git from './git.svg'
-
 import lightroom from './lightroom.svg'
-import materialui from './materialui.svg'
-
-import premierepro from './premierepro.svg'
-
-import selenium from './selenium.svg'
-import strapi from './strapi.svg'
-
 import wordpress from './wordpress.svg'
-
 import figma from './figma.svg'
-
-import ionic from './ionic.svg'
-
 import microsoftoffice from './microsoftoffice.svg'
 import picsart from './picsart.svg'
-
-import unity from './unity.svg'
-
 import canva from './canva.svg'
 
 export const skillsImage = (skill) => {
