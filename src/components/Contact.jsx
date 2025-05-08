@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import emailjs from 'emailjs-com';
 import {
   FaGithub, FaLinkedin, FaFacebook, FaInstagram,
-  FaWhatsapp, FaEnvelope, FaPhone, FaMapMarkerAlt
+  FaWhatsapp
 } from 'react-icons/fa';
 
 const fadeInVariants = {
@@ -22,16 +22,18 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_v0e93er',    
-      'template_h91mgan',    
+      'service_dx2pmvp',    
+      'template_82sxn5a',    
       e.target,
       'btotwDHrylpZeD4x2'      
     ).then(
       (result) => {
         setFormStatus("✅ Message sent successfully!");
+        showPopup("✅ Message sent successfully!", "success")
       },
       (error) => {
         setFormStatus("❌ Failed to send message. Please try again.");
+        showPopup("❌ Failed to send message. Please try again.", "error")
       }
     );
 
@@ -52,7 +54,7 @@ const Contact = () => {
       </motion.h1>
 
       <div className="flex flex-col md:flex-row w-full max-w-6xl gap-10 justify-between items-center">
-        {/* Contact Form */}
+       
         <motion.form
           ref={ref2}
           onSubmit={handleFormSubmit}
@@ -100,7 +102,7 @@ const Contact = () => {
           )}
         </motion.form>
 
-        {/* Contact Info */}
+      
         <motion.div
           ref={ref3}
           className="flex flex-col gap-6 shadow-lg w-full md:w-1/2 p-6 rounded-lg"
@@ -109,32 +111,32 @@ const Contact = () => {
           variants={fadeInVariants}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <a href="mailto:kanishkachethana@gmail.com" className="text-white text-lg font-medium flex items-center gap-2">
-            <FaEnvelope className="w-6 h-6" /> kanishkachethana@gmail.com
-          </a>
-          <a href="tel:+94789107363" className="text-white text-lg font-medium flex items-center gap-2">
-            <FaPhone className="w-6 h-6" /> +94 789 107 363
-          </a>
-          <p className="text-white text-lg font-medium flex items-center gap-2">
-            <FaMapMarkerAlt className="w-6 h-6" /> Anuradhapura, Sri Lanka
-          </p>
+          <a href="mailto:kanishkachethana@gmail.com" className="text-white text-lg font-medium">
+    kanishkachethana@gmail.com
+  </a>
+  <a href="tel:+94789107363" className="text-white text-lg font-medium">
+    +94 789 107 363
+  </a>
+  <p className="text-white text-lg font-medium">
+    Anuradhapura, Sri Lanka
+  </p>
 
-          <div className="flex gap-6 justify-start mt-4 flex-wrap">
-            <a href="https://github.com/Kanishka-Che" className="text-white hover:text-blue-400" aria-label="GitHub">
-              <FaGithub className="w-8 h-8" />
-            </a>
-            <a href="https://www.linkedin.com/in/kanishka-chethana-55b618295/" className="text-white hover:text-blue-400" aria-label="LinkedIn">
-              <FaLinkedin className="w-8 h-8" />
-            </a>
-            <a href="https://www.facebook.com/kanishka.chethana?mibextid=ZbWKwL" className="text-white hover:text-blue-400" aria-label="Facebook">
-              <FaFacebook className="w-8 h-8" />
-            </a>
-            <a href="https://www.instagram.com/kanishkachethana?igsh=N2Z5N2x4bDN4YzU5" className="text-white hover:text-blue-400" aria-label="Instagram">
-              <FaInstagram className="w-8 h-8" />
-            </a>
-            <a href="https://wa.me/94752955301" className="text-white hover:text-blue-400" aria-label="WhatsApp">
-              <FaWhatsapp className="w-8 h-8" />
-            </a>
+  <div className="flex gap-6 justify-start mt-4 flex-wrap">
+    <a href="https://github.com/Kanishka-Che" className="text-white hover:text-blue-400" aria-label="GitHub">
+      <FaGithub className="w-8 h-8" />
+    </a>
+    <a href="https://www.linkedin.com/in/kanishka-chethana-55b618295/" className="text-white hover:text-blue-400" aria-label="LinkedIn">
+      <FaLinkedin className="w-8 h-8" />
+    </a>
+    <a href="https://www.facebook.com/kanishka.chethana?mibextid=ZbWKwL" className="text-white hover:text-blue-400" aria-label="Facebook">
+      <FaFacebook className="w-8 h-8" />
+    </a>
+    <a href="https://www.instagram.com/kanishkachethana?igsh=N2Z5N2x4bDN4YzU5" className="text-white hover:text-blue-400" aria-label="Instagram">
+      <FaInstagram className="w-8 h-8" />
+    </a>
+    <a href="https://wa.me/94752955301" className="text-white hover:text-blue-400" aria-label="WhatsApp">
+      <FaWhatsapp className="w-8 h-8" />
+    </a>
           </div>
         </motion.div>
       </div>
