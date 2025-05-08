@@ -35,7 +35,7 @@ function Landing({ scrollToMyself }) {
                 style={{ height: '100vh' }}
             >
                 <motion.div
-                    className="p-1 mb-6 bg-gradient-to-tr from-gray-800 via-purple-900 to-black rounded-full w-48 h-48 overflow-hidden hover:shadow-[0_0_20px_8px_rgba(139,92,246,0.5),0_0_30px_12px_rgba(30,64,175,0.4)] transition-shadow duration-500 ease-in-out"
+                    className="p-1 mb-6 bg-gradient-to-tr from-blue-800 via-white-900 to-white rounded-full w-48 h-48 overflow-hidden hover:shadow-[0_0_20px_8px_rgba(139,92,246,0.5),0_0_30px_12px_rgba(30,64,175,0.4)] transition-shadow duration-500 ease-in-out"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.5 }}

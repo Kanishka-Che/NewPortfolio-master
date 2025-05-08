@@ -11,7 +11,7 @@ function Myself() {
   return (
     <section id="myself" className="w-full h-screen flex flex-col justify-center items-center mx-auto p-4">
     <div className="w-full h-screen flex flex-col justify-center items-center mx-auto p-4">
-      {/* Horizontal line with circles */}
+      
       
         <hr className="bg-gradient-to-tr from-pink-500 via-purple-600 to-indigo-700 h-2 border-0 font-bold flex-1 min-w-[100px]" />
         <motion.div className="flex justify-end items-center ml-2.5 flex-wrap">
