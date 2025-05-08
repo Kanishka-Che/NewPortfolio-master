@@ -47,7 +47,7 @@ return (
         },
         particles: {
             color: {
-                value: "#ffffff",
+                value: "#fffff",
             },
             links: {
                 color: "#ffffff",
