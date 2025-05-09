@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from 'C:/Users/Chethana/Desktop/NewPortfolio-master/public/logo.png';
+import logo from '../../assets/logo.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
