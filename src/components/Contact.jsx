@@ -112,7 +112,7 @@ const Contact = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <a href="mailto:kanishkachethana@gmail.com" className="text-white text-lg font-medium">
-    kanishkachethana@gmail.com
+    kanishkachethana123@gmail.com
   </a>
   <a href="tel:+94789107363" className="text-white text-lg font-medium">
     +94 789 107 363
