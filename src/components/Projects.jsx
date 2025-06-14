@@ -96,7 +96,7 @@ const Projects = () => {
             </div>
             <div className="mt-8 text-center max-w-4xl mx-auto text-white">
                 <p className="text-lg">
-                Here are some of the projects I have worked on. My stack includes technologies like React, Node.js, Express, MongoDB,React Native and more. I enjoy building full-stack applications and continuously learning new tools and frameworks to enhance my skills.
+                Here are some of the projects I have worked on. My stack includes technologies like React, Node.js, Express, MongoDB,React Native, Next.js, Tailwind CSS  and more. I enjoy building full-stack applications and continuously learning new tools and frameworks to enhance my skills.
                 </p>
             </div>
         </section>

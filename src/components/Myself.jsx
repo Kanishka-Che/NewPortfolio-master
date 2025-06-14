@@ -43,7 +43,7 @@ function Myself() {
         <div className="md:w-1/2 p-4bg-opacity-10 backdrop-blur-md rounded-lg">
           <p className="text-[4vw] md:text-[1.5vw] text-white text-left">
             I am Kanishka Chethana<br />
-            I'm a web designer and developer based in MERN stack.
+            I'm a web designer and developer based in MERN stack and Next.js
           </p>
           <p className="text-[4vw] md:text-[1.2vw] text-white text-left mt-6">
             Enthusiastic Software Engineer undergraduate with a passion for software development and innovation. Quick learner and adaptable team player, committed to solving complex problems and contributing to impactful projects. Focused on leveraging skills to advance in the tech industry and make a meaningful difference through technology.
